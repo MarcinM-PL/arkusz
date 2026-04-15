@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pola figur</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Pola figur płaskich</h2>
+    </header>
+    <main>
+        <nav>
+            <h3>MENU</h3>
+            <ul>
+                <li><a href="index.html">Prostokąt i trójkąt</a></li>
+                <li><a href="kolo.html">Okrąg i koło</a></li>
+            </ul>
+        </nav>
+        <section>
+            <img src="1d.bmp" alt="Figura" id="trójkąt">
+            <img src="2d.bmp" alt="Figura" id="prostokąt">
+            <br>
+            <img src="1m.bmp" alt="Wybierz trójkąt" class="obraz" onclick="zmianaobrazutrojkat()">
+            <img src="2m.bmp" alt="Wybierz prostokąt" class="obraz" onclick="zmianaobrazuprostokat()">
+        </section>
+        <aside>
+            <h3>Pole prostokąta / pole trójkąta</h3>
+            <label for="liczbaa">Bok prostokąta / podstawa trójkąta:</label>
+            <input type="number" id="liczbaa">
+            <label for="liczbab">Drugi bok prostokąta / wysokość trójkąta:</label>
+            <input type="number" id="liczbab">
+            <input type="submit" value="oblicz" onclick="liczenie()" id="oblicz">
+            <p id="wynik"></p>
+        </aside>
+    </main>
+    <footer>
+        <p>Autor:</p>
+    </footer>
+    <script>
+        let trojkat = document.getElementById('trójkąt')
+        let prostokat = document.getElementById('prostokąt')
+        let wynik = document.getElementById('wynik')
+        function zmianaobrazutrojkat(){
+            trojkat.style.display="inline"
+            prostokat.style.display="none"
+        }
+        function zmianaobrazuprostokat(){
+            trojkat.style.display="none"
+            prostokat.style.display="inline"
+        }
+        function liczenie(){
+            let liczbaa = document.getElementById('liczbaa').value
+            let liczbab = document.getElementById('liczbab').value
+            if{}
+        }
+    </script>
+</body>
+</html>
