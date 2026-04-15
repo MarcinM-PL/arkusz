@@ -39,21 +39,42 @@
         <p>Autor:</p>
     </footer>
     <script>
-        let trojkat = document.getElementById('trójkąt')
-        let prostokat = document.getElementById('prostokąt')
         let wynik = document.getElementById('wynik')
         function zmianaobrazutrojkat(){
+            let trojkat = document.getElementById('trójkąt')
+            let prostokat = document.getElementById('prostokąt')
             trojkat.style.display="inline"
             prostokat.style.display="none"
         }
         function zmianaobrazuprostokat(){
+            let trojkat = document.getElementById('trójkąt')
+            let prostokat = document.getElementById('prostokąt')
             trojkat.style.display="none"
             prostokat.style.display="inline"
         }
         function liczenie(){
+            let trojkat = document.querySelector('#trójkąt');
+            let styletrojkat = window.getComputedStyle(trojkat); 
+            let displaytrojkat = styletrojkat.getPropertyValue('display');
+            let prostokat = document.querySelector('#prostokąt');
+            let styleprostokat = window.getComputedStyle(prostokat); 
+            let displayprostokat = styleprostokat.getPropertyValue('display');
             let liczbaa = document.getElementById('liczbaa').value
             let liczbab = document.getElementById('liczbab').value
-            if{}
+            if(displaytrojkat == 'inline'){
+                let a = document.getElementById('liczbaa').value
+                let h = document.getElementById('liczbab').value
+                let P = a*h*1/2
+                wynik.innerHTML = `${P}`
+            }
+            else if(displayprostokat == 'inline'){
+                let a = document.getElementById('liczbaa').value
+                let b = document.getElementById('liczbab').value
+                let P = a*b
+                wynik.innerHTML = `${P}`
+            }
+            
+           
         }
     </script>
 </body>
